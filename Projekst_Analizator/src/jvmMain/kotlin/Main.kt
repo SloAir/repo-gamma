@@ -352,12 +352,12 @@ object Automaton: DFA {
         setSymbol(State.LeftVigle.value,Symbol.LeftVigle.value)
         setSymbol(State.RightVigle.value,Symbol.RightVigle.value)
         setSymbol(State.EOF.value, Symbol.EOF.value)
-        setSymbol(State.Country_City_Circle_C.value,Symbol.LeftParentheses.value)
-        setSymbol(State.Country_O.value,Symbol.LeftParentheses.value)
-        setSymbol(State.Country_U.value,Symbol.LeftParentheses.value)
-        setSymbol(State.Country_N.value,Symbol.LeftParentheses.value)
-        setSymbol(State.Country_T.value,Symbol.LeftParentheses.value)
-        setSymbol(State.Country_R.value,Symbol.LeftParentheses.value)
+        setSymbol(State.Country_City_Circle_C.value,Symbol.EOF.value)
+        setSymbol(State.Country_O.value,Symbol.EOF.value)
+        setSymbol(State.Country_U.value,Symbol.EOF.value)
+        setSymbol(State.Country_N.value,Symbol.EOF.value)
+        setSymbol(State.Country_T.value,Symbol.EOF.value)
+        setSymbol(State.Country_R.value,Symbol.EOF.value)
         setSymbol(State.Country_Y.value,Symbol.Country.value)
         setSymbol(State.City_Circle_I.value,Symbol.EOF.value)
         setSymbol(State.City_T.value,Symbol.EOF.value)
@@ -533,9 +533,8 @@ fun readFromFile(path: String): String {
 
 fun main(args: Array<String>) {
     println("Lexikalni anlizator: ")
-    val testString="country \"dummy\" { airplane \"dummy\" { point ( 21 , 12 ) } city \"dummy\" { airport \"dummy\" { building \"dummy\" { box ( point ( 53 , 25 ) , point ( 18 , 59 ) ) } building \"dummy\" { box ( point ( 63 , 53 ) , point ( 24 , 44 ) ) } terminal \"dummy\" { gate \"dummy\" { circle ( point ( 41 , 21 ) , 0.5 ) } gate \"dummy\" { circle ( point ( 14 , 61 ) , 0.5 ) } } runway \"dummy\" { line ( point ( -110 , -112) , point ( -120 , -112 ) ) } } } }"
-    val inputString="country \"Slovenia\" { airplane \"delta\"{ point ( 4 , 4 ) } airplane \"alfa\" { point ( 8 , 8 ) } city \"Ljubljana\" { airport \"Ljubljanaairport\" { building \"pickup\" { box ( point ( 3 , 5 ) , point ( 8 , 9 ) ) } building \"dropoff\" { box ( point ( 1 , 1 ) , point ( 2 , 2 ) ) } building \"checkin\" { box ( point ( 3 , 3 ) , point ( 4 , 4 ) ) } building \"store\" { box ( point ( 6 , 3 ) , point ( 8 , 4 ) ) } terminal \"TerminalA\" { gate \"Aone\" { circle ( point ( 1 , 1 ) , 0.5 ) } gate \"Awto\" { circle ( point ( 7 , 6 ) , 1 ) } gate \"Athree\" { circle ( point ( 9 , 2 ) , 2 ) } gate \"Afour\" { circle ( point ( 8 , 3 ) , 0.2 ) } gate \"Afive\" { circle ( point ( 4.6 , 3.7 ) , 0.4 ) } gate \"Asix\" { circle ( point ( 2 , 9 ) , 0.2 ) } gate \"Aseven\" { circle ( point ( 5 , 7 ) , 3) } gate \"Aeight\" { circle ( point ( 12 , 13 ) , 1) } } terminal \"TerminalB\" { gate \"Bone\" { circle ( point ( 19 , 12 ) , 1 ) } gate \"Btwo\" { circle ( point ( 7 , 6 ) , 1 ) } gate \"Bthree\" { circle ( point ( 9 , 2 ) , 2 ) } gate \"Bfour\" { circle ( point ( 8 , 3 ) , 0.2 ) } gate \"Bfive\" { circle ( point ( 1 , 1 ) , 0.5 ) } gate \"Bsix\" { circle ( point ( 2 , 9 ) , 0.2 ) } gate \"Bseven\" { circle ( point ( 5 , 7 ) , 3) } gate \"Beight\" { circle ( point ( 8 , 3 ) , 0.2 ) } } runway \"RunwayA\" { line ( point ( -10 , 4 ) , point ( -80 , 4 ) ) } runway \"RunwayB\" { line ( point ( -10 , -8 ) , point ( -95 , -8 ) ) } runway \"RunwayC\" { line ( point ( -10 , -12) , point ( -120 , -12 ) ) } } } city \"Maribor\" { airport \"Mariborairport\" { building \"pickup\" { box ( point ( 2 , 1 ) , point ( 3 , 4 ) ) } building \"dropoff\" { box ( point ( 2 , 3 ) , point ( 4 , 5 ) ) } building \"checkin\" { box ( point ( 1 , 5 ) , point ( 2 , 4 ) ) } building \"store\" { box ( point ( 3 , 4 ) , point ( -5 , -4 ) ) } terminal \"TerminalA\" { gate \"Aone\" { circle ( point ( 6 , 2 ) , 0.5 ) } gate \"Atwo\" { circle ( point ( 7 , -6 ) , 1 ) } gate \"Athree\" { circle ( point ( -9 , -2 ) , 2 ) } gate \"Afour\" { circle ( point ( 8 , 3 ) , 0.2 ) } gate \"Afive\" { circle ( point ( 4.6 , -3.7 ) , 0.4 ) } gate \"Asix\" { circle ( point ( -2 , 9 ) , 0.2 ) } gate \"Aseven\" { circle ( point ( -5 , 7 ) , 3) } gate \"Aeight\" { circle ( point ( -12 , -13 ) , 1) } } } } }"
-    val scanner=Scanner(Automaton, testString.byteInputStream())
+    val inputString="country \"Slovenia\" { airplane \"delta\"{ point ( 13.40 , 45.97 ) } airplane \"alfa\" { point ( 15.2 , 45.67 ) } city \"Ljubljana\" { airport \"Ljubljanaairport\" { building \"pickup\" { box ( point ( 14.55 , 45 ) , point ( 14.56 , 45.05 ) ) } building \"dropoff\" { box ( point ( 14.65 , 45.10 ) , point ( 14.2 , 46.2 ) ) } building \"checkin\" { box ( point ( 13.9 , 45.9 ) , point ( 1.98, 45.87 ) ) } building \"store\" { box ( point ( 16.24545454 , 47.13 ) , point ( 16.21 , 47.15 ) ) } terminal \"TermilA\" { gate \"Aone\" { circle ( point ( 14.65 , 45.9 ) , 0.0005 ) } gate \"Awto\" { circle ( point ( 7 , 6 ) , 1 ) } gate \"Athree\" { circle ( point ( 9 , 2 ) , 2 ) } gate \"Afour\" { circle ( point ( 8 , 3 ) , 0.2 ) } gate \"Afive\" { circle ( point ( 4.6 , 3.7 ) , 0.4 ) } gate \"Asix\" { circle ( point ( 2 , 9 ) , 0.2 ) } gate \"Aseven\" { circle ( point ( 5 , 7 ) , 3) } gate \"Aeight\" { circle ( point ( 12 , 13 ) , 1) } } terminal \"TerminalB\" { gate \"Bone\" { circle ( point ( 19 , 12 ) , 1 ) } gate \"Btwo\" { circle ( point ( 7 , 6 ) , 1 ) } gate \"Bthree\" { circle ( point ( 9 , 2 ) , 2 ) } gate \"Bfour\" { circle ( point ( 8 , 3 ) , 0.2 ) } gate \"Bfive\" { circle ( point ( 1 , 1 ) , 0.5 ) } gate \"Bsix\" { circle ( point ( 2 , 9 ) , 0.2 ) } gate \"Bseven\" { circle ( point ( 5 , 7 ) , 3) } gate \"Beight\" { circle ( point ( 8 , 3 ) , 0.2 ) } } runway \"RunwayA\" { line ( point ( -10 , 4 ) , point ( -80 , 4 ) ) } runway \"RunwayB\" { line ( point ( -10 , -8 ) , point ( -95 , -8 ) ) } runway \"RunwayC\" { line ( point ( -10 , -12) , point ( -120 , -12 ) ) } } } city \"Maribor\" { airport \"Mariborairport\" { building \"pickup\" { box ( point ( 2 , 1 ) , point ( 3 , 4 ) ) } building \"dropoff\" { box ( point ( 2 , 3 ) , point ( 4 , 5 ) ) } building \"checkin\" { box ( point ( 1 , 5 ) , point ( 2 , 4 ) ) } building \"store\" { box ( point ( 3 , 4 ) , point ( -5 , -4 ) ) } terminal \"TerminalA\" { gate \"Aone\" { circle ( point ( 6 , 2 ) , 0.5 ) } gate \"Atwo\" { circle ( point ( 7 , -6 ) , 1 ) } gate \"Athree\" { circle ( point ( -9 , -2 ) , 2 ) } gate \"Afour\" { circle ( point ( 8 , 3 ) , 0.2 ) } gate \"Afive\" { circle ( point ( 4.6 , -3.7 ) , 0.4 ) } gate \"Asix\" { circle ( point ( -2 , 9 ) , 0.2 ) } gate \"Aseven\" { circle ( point ( -5 , 7 ) , 3) } gate \"Aeight\" { circle ( point ( -12 , -13 ) , 1) } } } } }"
+    val scanner=Scanner(Automaton, inputString.byteInputStream())
     printTokens(scanner)
     println("\n")
     val parser = Parser(Scanner(Automaton,inputString.byteInputStream()),"")
@@ -582,7 +581,7 @@ class Parser(var scanner: Scanner,var stringJson_All: String){
             points.add("[$pointX, $pointY]")
         }
 
-        return points.joinToString(", ")
+        return points.joinToString(", ") + (", ") + points[0]
     }
     var prvi=""
     var drugi=""
@@ -962,17 +961,18 @@ class Parser(var scanner: Scanner,var stringJson_All: String){
                 token = scanner.getToken()
                 if (POINT()){
                     if (token?.symbol == Symbol.Comma.value) {
-                       // stringJson_All=stringJson_All+"}, "
-                       // stringJson_All=stringJson_All+"\"properties\":{\"radius\":"
                         token = scanner.getToken()
                         if (UNARY()){
                             val lastIndex=stringJson_All.lastIndexOf(':')
                             val circle=stringJson_All.substring(lastIndex+1)
-                            println(createCircle(circle))
+                            stringJson_All=stringJson_All.substringBeforeLast("[")
+                            stringJson_All=stringJson_All+"[["
+                            stringJson_All+=createCircle(circle)
                             if (token?.symbol == Symbol.RightParentheses.value) {
-                         //       stringJson_All=stringJson_All+"}"
-
+                                stringJson_All=stringJson_All+"]]"
                                 stringJson_All=stringJson_All+"}, "
+                                stringJson_All=stringJson_All+"\"properties\":null}, "
+
                                 token = scanner.getToken()
                                 return true
                             }
