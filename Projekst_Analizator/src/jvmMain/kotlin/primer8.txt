@@ -1,0 +1,48 @@
+country "uk" {
+    city "London" {
+        airport "Londonairportbrtitn" {
+            building "pickup" {
+                box ( point ( 3 , 5 ) , point ( 8 , 9 ) )
+            }
+             building "dropoff" {
+                box ( point ( 7 , 15 ) , point ( 18 , 19 ) )
+            }
+            building "checkin" {
+                box ( point ( 3 , 3 ) , point ( 4 , 4 ) )
+            }
+            terminal "terminalB" {
+                gate "Bone" {
+                    circle ( point ( 1 , 1 ) , 0.5 )
+                }
+                gate "Btwo" {
+                    circle ( point ( 2 , 2 ) , 0.5 )
+                }
+            }
+            runway "one" {
+                line ( point ( -10 , -12) , point ( -120 , -12 ) )
+            }
+        }
+        airport "Londonairporthelenica" {
+            building "pickup" {
+                box ( point ( 8 , 8 ) , point ( 18 , 10 ) )
+            }
+             building "dropoff" {
+                box ( point ( 8 , 21 ) , point ( 21 , 24 ) )
+            }
+            building "checkin" {
+                box ( point ( 5 , 3 ) , point ( 8 , 4 ) )
+            }
+            terminal "terminalHelenica" {
+                gate "Hone" {
+                    circle ( point ( 1 , 1 ) , 0.5 )
+                }
+                gate "Htwo" {
+                    circle ( point ( 2 , 2 ) , 0.5 )
+                }
+            }
+            runway "six" {
+                line ( point ( -10 , -12) , point ( -120 , -12 ) )
+            }
+        }
+    }
+}

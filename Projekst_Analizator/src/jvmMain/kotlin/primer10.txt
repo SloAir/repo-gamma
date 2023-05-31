@@ -1,0 +1,26 @@
+country "dummy" {
+    airplane "dummy" {
+        point ( 21 , 12 )
+    }
+    city "dummy" {
+        airport "dummy" {
+            building "dummy" {
+                box ( point ( 53 , 25 ) , point ( 18 , 59 ) )
+            }
+            building "dummy" {
+                box ( point ( 63 , 53 ) , point ( 24 , 44 ) )
+            }
+            terminal "dummy" {
+                gate "dummy" {
+                    circle ( point ( 41 , 21 ) , 0.5 )
+                }
+                gate "dummy" {
+                    circle ( point ( 14 , 61 ) , 0.5 )
+                }
+            }
+            runway "dummy" {
+                line ( point ( -110 , -112) , point ( -120 , -112 ) )
+            }
+        }
+    }
+}

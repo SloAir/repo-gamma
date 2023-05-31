@@ -1,0 +1,35 @@
+country "France" {
+    city "Paris" {
+        airport "Parisairport" {
+            building "pickup" {
+                box ( point ( 3 , 5 ) , point ( 8 , 9 ) )
+            }
+             building "dropoff" {
+                box ( point ( 7 , 15 ) , point ( 18 , 19 ) )
+            }
+            building "checkin" {
+                box ( point ( 3 , 3 ) , point ( 4 , 4 ) )
+            }
+            terminal "terminalB" {
+                gate "Bone" {
+                    circle ( point ( 1 , 1 ) , 0.5 )
+                }
+                gate "Btwo" {
+                    circle ( point ( 2 , 2 ) , 0.5 )
+                }
+            }
+            runway "one" {
+                line ( point ( -10 , -12) , point ( -120 , -12 ) )
+            }
+        }
+    }
+    airplane "Slo" {
+        point ( 532 , 121 )
+    }
+    airplane "Ita" {
+        point ( 542 , -132 )
+    }
+    airplane "LAS" {
+        point ( 190 , 423 )
+    }
+}

@@ -1,0 +1,130 @@
+country "Nemcija" {
+    airplane "pristina"{
+        point ( 42 , 45 )
+    }
+    airplane "trina" {
+        point ( 32 , -95 )
+    }
+    city "Ljubljana" {
+        airport "Ljubljanaairport" {
+            building "pickup" {
+                box ( point ( 32 , -43 ) , point ( 82 , 91 ) )
+            }
+            building "dropoff" {
+                box ( point ( -90 , 32) , point ( 4 , 32 ) )
+            }
+            building "checkin" {
+                box ( point ( 32 , 54 ) , point ( 1 , 5 ) )
+            }
+            building "rolex" {
+                box ( point ( 98 , 54 ) , point ( 51 , 53 ) )
+            }
+            building "henelica" {
+                 box ( point ( 54 , 25 ) , point ( 50 , 50 ) )
+            }
+            terminal "TerminalG" {
+                gate "Gone" {
+                    circle ( point ( -46 , 37 ) , 0.5 )
+                }
+                gate "Gtwo" {
+                    circle ( point ( -31 , 76 ) , 1 )
+                }
+                gate "Gthree" {
+                    circle ( point ( -9 , -2 ) , 2 )
+                }
+                gate "Gfour" {
+                    circle ( point ( 8 , 3 ) , 0.2 )
+                }
+                gate "Gfive" {
+                    circle ( point ( 4.6 , 3.7 ) , 0.4 )
+                }
+                gate "Gsix" {
+                    circle ( point ( 2 , 9 ) , 0.2 )
+                }
+                gate "Gseven" {
+                    circle ( point ( 5 , 7 ) , 3)
+                }
+                gate "Geight" {
+                    circle ( point ( 12 , 13 ) , 1)
+                }
+            }
+            terminal "TerminalA" {
+                gate "Aone" {
+                    circle ( point ( -46 , 37 ) , 0.5 )
+                }
+                gate "Atwo" {
+                    circle ( point ( -31 , 76 ) , 1 )
+                }
+                gate "Athree" {
+                    circle ( point ( -9 , -2 ) , 2 )
+                }
+                gate "Afour" {
+                    circle ( point ( 8 , 3 ) , 0.2 )
+                }
+                gate "Afive" {
+                    circle ( point ( 4.6 , 3.7 ) , 0.4 )
+                }
+                gate "Asix" {
+                    circle ( point ( 2 , 9 ) , 0.2 )
+                }
+                gate "Aseven" {
+                    circle ( point ( 5 , 7 ) , 3)
+                }
+                gate "Aeight" {
+                    circle ( point ( 12 , 13 ) , 1)
+                }
+            }
+            terminal "TerminalB" {
+                gate "Bone" {
+                    circle ( point ( 19 , 12 ) , 1 )
+                }
+                gate "Btwo" {
+                    circle ( point ( 7 , 6 ) , 1 )
+                }
+                gate "Bthree" {
+                    circle ( point ( 9 , 2 ) , 2 )
+                }
+                gate "Bfour" {
+                    circle ( point ( 8 , 3 ) , 0.2 )
+                }
+                gate "Bfive" {
+                    circle ( point ( 1 , 1 ) , 0.5 )
+                }
+                gate "Bsix" {
+                    circle ( point ( 2 , 9 ) , 0.2 )
+                }
+                gate "Bseven" {
+                    circle ( point ( 5 , 7 ) , 3)
+                }
+                gate "Beight" {
+                    circle ( point ( 8 , 3 ) , 0.2 )
+                }
+            }
+            runway "RunwayH" {
+                line ( point ( -10 , 4 ) , point ( -80 , 4 ) )
+            }
+            runway "RunwayS" {
+                line ( point ( -10 , -8 ) , point ( -95 , -8 ) )
+            }
+            runway "RunwayB" {
+                line ( point ( -10 , -12) , point ( -120 , -12 ) )
+            }
+        }
+    }
+    city "Maribor" {
+        airport "Mariborairport" {
+            building "pickup" {
+                box ( point ( 2 , 1 ) , point ( 3 , 4 ) )
+            }
+            building "dropoff" {
+                box ( point ( 2 , 3 ) , point ( 4 , 5 ) )
+            }
+            building "checkin" {
+                box ( point ( 1 , 5 ) , point ( 2 , 4 ) )
+            }
+            building "store" {
+                box ( point ( 3 , 4 ) , point ( -5 , -4 ) )
+            }
+        }
+    }
+}

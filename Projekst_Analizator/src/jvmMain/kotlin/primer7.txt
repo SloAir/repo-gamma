@@ -1,0 +1,26 @@
+country "switzerland" {
+    city "Zuric" {
+        airport "Zuricairport" {
+            building "pickup" {
+                box ( point ( 3 , 5 ) , point ( 8 , 9 ) )
+            }
+             building "dropoff" {
+                box ( point ( 7 , 15 ) , point ( 18 , 19 ) )
+            }
+            building "checkin" {
+                box ( point ( 3 , 3 ) , point ( 4 , 4 ) )
+            }
+            terminal "terminalS" {
+                gate "Aone" {
+                    circle ( point ( 1 , 1 ) , 0.5 )
+                }
+                gate "Atwo" {
+                    circle ( point ( 2 , 2 ) , 0.5 )
+                }
+            }
+            runway "one" {
+                line ( point ( -10 , -12) , point ( -120 , -12 ) )
+            }
+        }
+    }
+}

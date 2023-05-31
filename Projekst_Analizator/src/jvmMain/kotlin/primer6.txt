@@ -1,0 +1,14 @@
+country "vatican" {
+    airplane "delta" {
+        point ( 5 , 1 )
+    }
+    airplane "gama" {
+        point ( 6, -72 )
+    }
+    airplane "alfa" {
+        point ( -53, -22 )
+    }
+    airplane "beta" {
+        point ( 51, -75 )
+    }
+}

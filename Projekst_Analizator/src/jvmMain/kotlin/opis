@@ -1,0 +1,85 @@
+OPIS LETALIŠČA Oz. Države
+
+1 KONSTRUKTI
+
+    1.1 Števila
+        1
+        1.4
+        -1
+        -1.4
+
+    1.2 Nizi
+        "NIZ"
+
+    1.3 Točke
+        Z točkami predstavimo lokacije na zamljevidu, v tem primeru je X longituda in Y latituda.
+        point (X, Y)
+
+    1.4 Bloki
+
+        1.4.1
+            Blok country predstavlja državo, ki jo opisujemo. Vsebuje lahko bloke za opis letal in letališč. To je tudi glavni element v jeziku.
+            country "NAME" {
+                BLOCKS
+            }
+        1.4.2
+            Blok city predtavlja mesto, ki jo opisujemo z bloki airport in building.
+            city "NAME" {
+                BLOCKS
+            }
+
+        1.4.3
+            Blok airplane predstavlja letalo, ki ga opisujemo. Vsebuje ukaze za izris letala, ki izriče krog.
+            airplane "NAME" {
+                COMMANDS
+            }
+
+        1.4.4
+            Blok airport predstavlja letališče, ki ga opisujemo. Vsebuje čahko bloke za opis building, terminal in runway.
+            airport "NAME" {
+                BLOCKS
+            }
+
+        1.4.5
+            Blok building predstavlja zgradbe znotraj letališča, kot so trgovina, pickup, dropoff, checkin. Vsebuje ukaze za izris. Izris je lahko z box ali circle.
+            building "NAME" {
+                COMMANDS
+            }
+
+        1.4.6
+            Blok runway predstavlja izletno pot. Vsebuje ukaze za izris z line.
+            runway "NAME" {
+                COMMANDS
+            }
+
+        1.4.7
+            Blok terminal predstavlja terminal. Vsebuje bloke za opis gate.
+            terminal "NAME" {
+                BLOCKS
+            }
+
+        1.4.8
+            Blok gate predtavlja vrata za vkrcanje. Vsebuje ukaze za izris vrat.
+            gate "NAME" {
+                COMMANDS
+            }
+
+    1.5 Ukazi
+
+        1.5.1
+            Ukaz line izriše črto, med podanima lokacijama.
+            line (POINT, POINT)
+
+        1.5.2
+            Ukaz box izriše pravokotnik, med podanima lokacijama. Torej prva lokacija je
+            zgornji levi kot pravokotnika druga lokacija pa je spodnji desni kot.
+            box (POINT, POINT)
+
+        1.5.3
+            Ukaz circle izriše krog z izbranim polmerom na podani lokaciji. Ta lokacija predstavlja center kroga.
+            circle (POINT, RADIUS)
+
+
+
+
+

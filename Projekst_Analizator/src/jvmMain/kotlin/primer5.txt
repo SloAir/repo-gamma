@@ -1,0 +1,26 @@
+country "luxembourg" {
+    airplane "delta" {
+       point ( 5 , 1 )
+    }
+    city "luxembourg" {
+        airport "luxembourgairport" {
+            building "pickupanddropoff" {
+                box ( point ( 3 , 5 ) , point ( 8 , 9 ) )
+            }
+            building "checkin" {
+                box ( point ( 3 , 3 ) , point ( 4 , 4 ) )
+            }
+            terminal "terminalS" {
+                gate "Aone" {
+                    circle ( point ( 1 , 1 ) , 0.5 )
+                }
+                gate "Atwo" {
+                    circle ( point ( 1 , 1 ) , 0.5 )
+                }
+            }
+            runway "one" {
+                line ( point ( -10 , -12) , point ( -120 , -12 ) )
+            }
+        }
+    }
+}

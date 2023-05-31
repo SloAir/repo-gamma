@@ -1,0 +1,127 @@
+country "Slovenia" {
+    airplane "delta"{
+        point ( 4 , 4 )
+    }
+    airplane "alfa" {
+        point ( 8 , 8 )
+    }
+    city "Ljubljana" {
+        airport "Ljubljanaairport" {
+            building "pickup" {
+                box ( point ( 3 , 5 ) , point ( 8 , 9 ) )
+            }
+            building "dropoff" {
+                box ( point ( 1 , 1 ) , point ( 2 , 2 ) )
+            }
+            building "checkin" {
+                box ( point ( 3 , 3 ) , point ( 4 , 4 ) )
+            }
+            building "store" {
+                box ( point ( 6 , 3 ) , point ( 8 , 4 ) )
+            }
+            terminal "TerminalA" {
+                gate "Aone" {
+                    circle ( point ( 1 , 1 ) , 0.5 )
+                }
+                gate "Awto" {
+                    circle ( point ( 7 , 6 ) , 1 )
+                }
+                gate "Athree" {
+                    circle ( point ( 9 , 2 ) , 2 )
+                }
+                gate "Afour" {
+                    circle ( point ( 8 , 3 ) , 0.2 )
+                }
+                gate "Afive" {
+                    circle ( point ( 4.6 , 3.7 ) , 0.4 )
+                }
+                gate "Asix" {
+                    circle ( point ( 2 , 9 ) , 0.2 )
+                }
+                gate "Aseven" {
+                    circle ( point ( 5 , 7 ) , 3)
+                }
+                gate "Aeight" {
+                    circle ( point ( 12 , 13 ) , 1)
+                }
+            }
+            terminal "TerminalB" {
+                gate "Bone" {
+                    circle ( point ( 19 , 12 ) , 1 )
+                }
+                gate "Btwo" {
+                    circle ( point ( 7 , 6 ) , 1 )
+                }
+                gate "Bthree" {
+                    circle ( point ( 9 , 2 ) , 2 )
+                }
+                gate "Bfour" {
+                    circle ( point ( 8 , 3 ) , 0.2 )
+                }
+                gate "Bfive" {
+                    circle ( point ( 1 , 1 ) , 0.5 )
+                }
+                gate "Bsix" {
+                    circle ( point ( 2 , 9 ) , 0.2 )
+                }
+                gate "Bseven" {
+                    circle ( point ( 5 , 7 ) , 3)
+                }
+                gate "Beight" {
+                    circle ( point ( 8 , 3 ) , 0.2 )
+                }
+            }
+            runway "RunwayA" {
+                line ( point ( -10 , 4 ) , point ( -80 , 4 ) )
+            }
+            runway "RunwayB" {
+                line ( point ( -10 , -8 ) , point ( -95 , -8 ) )
+            }
+            runway "RunwayC" {
+                line ( point ( -10 , -12) , point ( -120 , -12 ) )
+            }
+        }
+    }
+    city "Maribor" {
+        airport "Mariborairport" {
+            building "pickup" {
+                box ( point ( 2 , 1 ) , point ( 3 , 4 ) )
+            }
+            building "dropoff" {
+                box ( point ( 2 , 3 ) , point ( 4 , 5 ) )
+            }
+            building "checkin" {
+                box ( point ( 1 , 5 ) , point ( 2 , 4 ) )
+            }
+            building "store" {
+                box ( point ( 3 , 4 ) , point ( -5 , -4 ) )
+            }
+            terminal "TerminalA" {
+                gate "Aone" {
+                    circle ( point ( 6 , 2 ) , 0.5 )
+                }
+                gate "Atwo" {
+                    circle ( point ( 7 , -6 ) , 1 )
+                }
+                gate "Athree" {
+                    circle ( point ( -9 , -2 ) , 2 )
+                }
+                gate "Afour" {
+                    circle ( point ( 8 , 3 ) , 0.2 )
+                }
+                gate "Afive" {
+                    circle ( point ( 4.6 , -3.7 ) , 0.4 )
+                }
+                gate "Asix" {
+                    circle ( point ( -2 , 9 ) , 0.2 )
+                }
+                gate "Aseven" {
+                    circle ( point ( -5 , 7 ) , 3)
+                }
+                gate "Aeight" {
+                    circle ( point ( -12 , -13 ) , 1)
+                }
+            }
+        }
+    }
+}

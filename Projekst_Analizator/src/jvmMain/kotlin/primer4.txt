@@ -1,0 +1,136 @@
+country "Italy" {
+    airplane "delta"{
+        point ( -30 , 47 )
+    }
+    airplane "alfa" {
+        point ( -60 , -51 )
+    }
+    city "Rome" {
+        airport "Romeairport" {
+            building "pickup" {
+                box ( point ( 62 , -16 ) , point ( -79 , -86 ) )
+            }
+            building "dropoff" {
+                box ( point ( -75 , -33 ) , point ( 68 , 68 ) )
+            }
+            building "checkin" {
+                box ( point ( -79 , 1 ) , point ( 24 , -79 ) )
+            }
+            building "ganiture" {
+                box ( point ( -96 , -62 ) , point ( 37 , 49 ) )
+            }
+            building "guitarshop" {
+                box ( point ( -96 , -62 ) , point ( 37 , 49 ) )
+            }
+            terminal "TerminalA" {
+                gate "Aone" {
+                    circle ( point ( 1 , -2 ) , 41 )
+                }
+                gate "Atwo" {
+                    circle ( point ( -94 , -85 ) , 92 )
+                }
+                gate "Athree" {
+                    circle ( point ( 9 , -18 ) , 77 )
+                }
+                gate "Afour" {
+                    circle ( point ( -30 , -99 ) , 59 )
+                }
+                gate "Afive" {
+                    circle ( point ( 19 , -59 ) , -48 )
+                }
+                gate "Asix" {
+                    circle ( point ( 71 , -17 ) , 50 )
+                }
+                gate "Aseven" {
+                    circle ( point ( 44 , 53 ) , 32 )
+                }
+                gate "Aeight" {
+                    circle ( point ( -64 , 36 ) , -98 )
+                }
+                gate "Anine" {
+                    circle ( point ( -4 , 36 ) , -9 )
+                }
+                gate "Aten" {
+                    circle ( point ( -67 , 7 ) , -9 )
+                }
+            }
+            terminal "TerminalB" {
+                gate "Bone" {
+                    circle ( point ( 26 , 34 ) , -37 )
+                }
+                gate "Btwo" {
+                    circle ( point ( -71 , 69 ) , 55 )
+                }
+                gate "Bthree" {
+                    circle ( point ( -51 , -18 ) , 1 )
+                }
+                gate "Bfour" {
+                    circle ( point ( -6 , -68 ) , -36 )
+                }
+                gate "Bfive" {
+                    circle ( point ( -88 , -47 ) , -5 )
+                }
+                gate "Bsix" {
+                    circle ( point ( -48 , -68 ) , -45 )
+                }
+                gate "Bseven" {
+                    circle ( point ( -4 , -88 ) , -59 )
+                }
+                gate "Beight" {
+                    circle ( point ( 84 , 31 ) , 81 )
+                }
+            }
+            runway "RunwayA" {
+            line ( point ( -61 , -28 ) , point ( 16 , -27 ) )
+            }
+            runway "RunwayB" {
+            line ( point ( -90 , 33 ) , point ( -64 , 100 ) )
+            }
+            runway "RunwayC" {
+            line ( point ( -18 , -70 ) , point ( 56 , 33 ) )
+            }
+        }
+    }
+    city "Maribor" {
+        airport "Mariborairport" {
+            building "pickup" {
+                box ( point ( -41 , 36 ) , point ( 75 , -3 ) )
+            }
+            building "dropoff" {
+                box ( point ( -79 , -97 ) , point ( 38 , 60 ) )
+            }
+            building "checkin" {
+                box ( point ( 90 , 26 ) , point ( 3 , 31 ) )
+            }
+            building "store" {
+                box ( point ( -99 , -30 ) , point ( 49 , 98 ) )
+            }
+            terminal "TerminalA" {
+                gate "Aone" {
+                    circle ( point ( -67 , -97 ) , -27 )
+                }
+                gate "Atwo" {
+                    circle ( point ( -14 , 46 ) , -96 )
+                }
+                gate "Athree" {
+                    circle ( point ( 53 , 4 ) , -56 )
+                }
+                gate "Afour" {
+                    circle ( point ( -9 , 7 ) , -96 )
+                }
+                gate "Afive" {
+                    circle ( point ( -59 , 90 ) , -60 )
+                }
+                gate "Asix" {
+                    circle ( point ( -17 , -54 ) , -90 )
+                }
+                gate "Aseven" {
+                    circle ( point ( 16 , 78 ) , -61 )
+                }
+                gate "Aeight" {
+                    circle ( point ( -97 , -5 ) , -82 )
+                }
+            }
+        }
+    }
+}

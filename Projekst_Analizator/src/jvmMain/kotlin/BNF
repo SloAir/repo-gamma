@@ -1,0 +1,59 @@
+START ::= COUNTRY ok
+
+//točke
+POINT ::= point ( UNARY , UNARY )   ok
+UNARY ::= plus PRIMARY | minus PRIMARY | PRIMARY    ok
+PRIMARY ::= int | double | ( UNARY )    ok
+
+//if
+IF ::= if ( UNARY LOGIC UNARY ) { CODES } ELSE
+ELSE ::= else { CODES } | ε
+CODES ::= ALL_ELEMENTS CODE
+CODE ::= CODES | ε
+
+//logic
+LOGIC ::= == | <= | >= | > | < | !=
+
+//izris
+BOX ::= box ( POINT , POINT )                       ok
+CIRCLE ::= circle ( POINT , UNARY )                 ok
+LINE ::= line ( POINT , POINT )                     ok
+
+//city
+CITY ::= city string { CITY_ELEMENTS }                      ok
+CITY_ELEMENTS ::= ELEMENTS_INSIDE_CITY CITY_ELEMENT         ok
+CITY_ELEMENT ::= CITY_ELEMENTS | ε                          ok
+
+//airport
+AIRPORT ::= airport string { AIRPORT_ELEMENTS }                 ok
+AIRPORT_ELEMENTS ::= ELEMENTS_INSIDE_AIRPORT AIRPORT_ELEMENT    ok
+AIRPORT_ELEMENT ::= AIRPORT_ELEMENTS | ε                        ok
+
+//building
+BUILDING ::= building string { BOX }                            ok
+
+//terminal
+TERMINAL ::= terminal string { TERMINAL_ELEMENTS }              ok
+TERMINAL_ELEMENTS ::= ELEMENTS_INSIDE_TERMINAL TERMINAL_ELEMENT ok
+TERMINAL_ELEMENT ::= TERMINAL_ELEMENTS | ε                      ok
+
+//runway
+RUNWAY ::= runway string { LINE }                               ok
+
+//gate
+GATE ::= gate string { CIRCLE }                                 ok
+
+//country
+COUNTRY ::= country string { COUNTRY_ELEMENTS }                     ok
+COUNTRY_ELEMENTS ::= ELEMENTS_INSIDE_COUNTRY COUNTRY_ELEMENT        ok
+COUNTRY_ELEMENT ::= COUNTRY_ELEMENTS | ε                            ok
+
+//airplane
+AIRPLANE ::= airplane string { POINT }                              ok
+
+//elementi
+ELEMENTS_INSIDE_COUNTRY ::= CITY | AIRPLANE | IF                    samo še IF
+ELEMENTS_INSIDE_CITY ::= AIRPORT | BUILDING | IF                    samo še IF
+ELEMENTS_INSIDE_AIRPORT ::=  BUILDING | TERMINAL | RUNWAY | IF      samo še IF
+ELEMENTS_INSIDE_TERMINAL ::= GATE | IF                              samo še IF
+ALL_ELEMENTS ::= CITY | AIRPLANE | AIRPORT | BUILDING | TERMINAL | RUNWAY | GATE | IF
